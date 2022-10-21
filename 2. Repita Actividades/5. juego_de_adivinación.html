@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+
+<h3>Programa Juego Adivinación</h3>
+
+<script>
+
+//Función para ahcer salto de linea	.
+function saltarLinea() {
+	
+	document.write("<br><br><hr><br>");
+
+}
+
+//Función para imprimir texto.
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+
+}
+
+let numeroJuego = Math.round(Math.random()*10);
+let ganar = false
+
+for (i = 1; i <= 3; i++) {
+
+	let numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10 - Solo tiene 3 intentos"));
+
+	if (numeroJuego == numeroLanzado) {
+		
+		ganar = true
+		alert(`Felicidades usted ha conseguido adivinar el número en el ${i} intento`);
+		break;
+
+	} else if (numeroJuego != numeroLanzado && i == 3) {
+
+		if (ganar == false) {
+
+			alert(`No ha conseguido adivinar el número, el número ganador era el ${numeroJuego}`);
+			break;
+
+		}
+
+	} else if (numeroJuego > numeroLanzado) {
+		
+		ganar = false
+		alert(`El número no es correcto le quedan ${3 - i} intentos, el número es mayor a ${numeroLanzado}`);
+
+	} else if (numeroJuego < numeroLanzado) {
+
+		ganar = false
+		alert(`El número no es correcto le quedan ${3 - i} intentos, el número es menor a ${numeroLanzado}`);
+
+	}
+
+}
+
+</script>

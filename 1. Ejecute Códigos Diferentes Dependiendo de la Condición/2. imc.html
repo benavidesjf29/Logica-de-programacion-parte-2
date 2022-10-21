@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+
+<h3>Programa Calcular IMC</h3>
+
+<script>
+
+//Función para ahcer salto de linea	.
+function saltarLinea() {
+	
+	document.write("<br><br><hr><br>");
+
+}
+
+//Función para imprimir texto.
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+
+}
+
+//Función para calcular el IMC.
+function calcularImc(peso,altura) {
+
+	return (peso / (altura * altura));
+
+}
+
+nombreInformado = prompt("¿Cual es su nombre?");
+pesoInformado = prompt("Informe su peso");
+alturaInformado = prompt("Informe su altura");
+let imc = calcularImc(pesoInformado,alturaInformado);
+
+imprimir("Hola " + nombreInformado +", el imc calculado es : " + imc);
+
+if (imc < 18.5) {
+
+imprimir("Usted esta por debajo de los estandares normales");
+
+} else if (imc >= 18.5 && imc < 25 ) {
+
+		imprimir("Usted esta en los estandares normales");
+
+} else if (imc >= 25 && imc < 30 ) {
+
+		imprimir("Usted tiene sobrepeso");
+
+} else {
+
+	imprimir("Usted tiene obesidad");
+
+}
+
+</script>

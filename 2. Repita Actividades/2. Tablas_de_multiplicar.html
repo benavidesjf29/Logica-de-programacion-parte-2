@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<h3>Programa Tablas de Multiplicar</h3>
+
+<script>
+
+//Función para ahcer salto de linea	.
+function saltarLinea() {
+	
+	document.write("<br><br>");
+
+}
+
+//Función para imprimir texto.
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+
+}
+
+let valorMultiplicar = prompt("Escriba el valor a multiplicar")
+
+for (var i = 1; i <= 10; i++) {
+
+	imprimir(`${valorMultiplicar} * ${i} = ${(valorMultiplicar * i)}`);
+
+}
+
+</script>
+

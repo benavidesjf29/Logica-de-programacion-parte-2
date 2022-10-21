@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+
+<h3>Programa Año Mundial Fifa</h3>
+
+<script>
+
+//Función para ahcer salto de linea	.
+function saltarLinea() {
+	
+	document.write("<br><br><hr><br>");
+
+}
+
+//Función para imprimir texto.
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+
+}
+
+
+
+//Código loop para impirmir los años del mundial con while
+let anhoMundial = 1930;
+let anhoMundialfin = parseInt(prompt("Escriba hasta que año desea saber si hubo mundial"));
+
+/*while (anhoMundial <= anhoMundialfin) {
+
+	alert("Hubo mundial de la fifa en el año " + anhoMundial);
+	anhoMundial = anhoMundial + 4;
+
+}*/
+
+//Código loop para impirmir los años del mundial con for
+for (var i = 1930; i <= anhoMundialfin; i = i + 4) {
+
+	imprimir("Hubo mundial de la fifa en el año " + i);
+
+}
+
+</script>

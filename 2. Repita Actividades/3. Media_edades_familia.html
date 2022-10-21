@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+
+<h3>Programa Media de las Edades de una Familia</h3>
+
+<script>
+
+//Función para ahcer salto de linea	.
+function saltarLinea() {
+	
+	document.write("<br><br>");
+
+}
+
+//Función para imprimir texto.
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+
+}
+
+let miembros = parseInt(prompt("Cuantos miembros son en su familia"));
+let sumaTotal = 0;
+
+for (var i = 1; i <= miembros; i++) {
+	
+	let anhoMiembro = parseInt(prompt(`Cuantos años tiene el ${i}`));
+	sumaTotal = anhoMiembro + sumaTotal;
+	
+}
+
+imprimir(`La media de los ${miembros} integrantes de su familia es : ${sumaTotal / miembros}` );
+
+
+</script>
+

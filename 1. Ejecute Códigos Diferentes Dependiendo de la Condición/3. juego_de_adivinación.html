@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+
+<h3>Programa Juego Adivinación</h3>
+
+<script>
+
+//Función para ahcer salto de linea	.
+function saltarLinea() {
+	
+	document.write("<br><br><hr><br>");
+
+}
+
+//Función para imprimir texto.
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+
+}
+
+function sorteo(n) {
+
+	return Math.round(Math.random() * n);
+
+}
+
+let numeroPensado = sorteo(10);
+let numeroLanzado = parseInt(prompt("Ingrese un numero entre 0 y " + numeroPensado));
+
+if (numeroPensado == numeroLanzado) {
+
+imprimir("Felicidades usted ha conseguido adivinar el número");
+
+} else if (numeroPensado > numeroLanzado) {
+
+imprimir("Lo sentimos ese número no es, el número oculto era mayor");
+
+} else {
+
+imprimir("Lo sentimos ese número no es, el número oculto era menor");
+
+}
+
+</script>
